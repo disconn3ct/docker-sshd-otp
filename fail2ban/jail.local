@@ -1,0 +1,13 @@
+[DEFAULT]
+maxretry = 2
+bantime = -1
+findtime = 300
+ignoreip = 127.0.0.1/8 
+action=hostsdeny
+
+[ssh]
+enabled = true
+
+[ssh-ddos]
+enabled = true
+
