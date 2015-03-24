@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-RUN apt-get update && apt-get upgrade -y && apt-get install -y ssh rsyslog fail2ban openssh-server openssh-client supervisor python-pyinotify libpam-google-authenticator && apt-get clean
+RUN apt-get update && apt-get upgrade -y && apt-get install -y ed ssh rsyslog fail2ban openssh-server openssh-client supervisor python-pyinotify libpam-google-authenticator && apt-get clean
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set up directories
