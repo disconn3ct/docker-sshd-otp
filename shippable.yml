@@ -1,0 +1,5 @@
+language: c
+
+build:
+  ci:
+    - docker build -t disconn3ct/otp-ssh:v2.$BUILD_NUMBER .
