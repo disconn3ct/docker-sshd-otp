@@ -1,6 +1,10 @@
 SSH Host with Fail2ban, Google Authenticator
 ===
-This docker container bundles up sshd, fail2ban and google-authenticator TOTP into a secure ssh gateway box. Both root and 'user' accounts are available.
+This docker container bundles up sshd, fail2ban and google-authenticator TOTP into a secure ssh gateway box.
+
+The rest of this is false and outdated.
+
+Both root and 'user' accounts are available.
 
 The 'Dockerfile-alt' can be used to prepopulate your authorized keys and google-authenticator config. You will need to put the keys into 'ssh/authorized_keys' and put the .google_authenticator file into 'google_authenticator'.
 
