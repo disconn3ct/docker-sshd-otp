@@ -2,18 +2,27 @@
 maxretry = 2
 bantime = -1
 findtime = 300
-ignoreip = 127.0.0.1/8 
+ignoreip = 127.0.0.1/8 ${T_IGNORE_IP}
 action=hostsdeny
+destemail=${T_DESTEMAIL}
 
-[ssh]
+[sshd]
 enabled = true
 maxretry = 2
 bantime = -1
 findtime = 300
 
-[ssh-ddos]
+[sshd-ddos]
 enabled = true
 maxretry = 2
 bantime = -1
 findtime = 300
 
+[recidive]
+
+enabled  = true
+action   = hostsdeny
+           mail-whois-lines[name=recidive, logpath=/var/log/fail2ban.log]
+bantime  = 604800  ; 1 week
+findtime = 86400   ; 1 day
+maxretry = 5
