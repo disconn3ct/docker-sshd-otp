@@ -3,9 +3,10 @@ language: c
 
 build:
   ci:
-    - docker build -t disconn3ct/docker-sshd-otp:v2.$BUILD_NUMBER .
+    - docker build -t disconn3ct/bastion-otp:v0.$BUILD_NUMBER .
   post_ci:
-    - docker push disconn3ct/docker-sshd-otp:v2.$BUILD_NUMBER
+    - docker push disconn3ct/bastion-otp:v0.$BUILD_NUMBER
+    - docker push disconn3ct/bastion-otp:unstable
 
 # From examples
 integrations:
