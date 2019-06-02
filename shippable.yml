@@ -3,10 +3,15 @@ language: c
 
 build:
   ci:
-    - docker build -t disconn3ct/otp-ssh:v2.$BUILD_NUMBER .
+    - docker build -t disconn3ct/docker-sshd-otp:v2.$BUILD_NUMBER .
+  post_ci:
+    - docker push disconn3ct/docker-sshd-otp:v2.$BUILD_NUMBER
 
 # From examples
 integrations:
+  hub:
+    - integrationName: docker-hub
+      type: dockerRegistryLogin                        
 
   # http://docs.shippable.com/ci/shippableyml/#notifications
   notifications:
