@@ -4,3 +4,16 @@ language: c
 build:
   ci:
     - docker build -t disconn3ct/otp-ssh:v2.$BUILD_NUMBER .
+
+# From examples
+integrations:
+
+  # http://docs.shippable.com/ci/shippableyml/#notifications
+  notifications:
+  # turning of email for PR builds, get notified only on failure and change in status
+  # http://docs.shippable.com/integrations/notifications/email/
+    - integrationName: email
+      type: email
+      on_success: change
+      on_failure: always
+      on_pull_request: never
