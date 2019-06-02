@@ -5,10 +5,11 @@ build:
   ci:
     - docker build -t disconn3ct/bastion-otp:v0.$BUILD_NUMBER .
   post_ci:
-    - if [ "$BRANCH" == "feature/v2" ]; then \
-    docker tag disconn3ct/bastion-otp:v0.$BUILD_NUMBER disconn3ct/bastion-otp:unstable && \
-    docker push disconn3ct/bastion-otp:v0.$BUILD_NUMBER ;\
-    fi
+    - >
+      if [ "$BRANCH" == "feature/v2" ]; then
+      docker tag disconn3ct/bastion-otp:v0.$BUILD_NUMBER disconn3ct/bastion-otp:unstable &&
+      docker push disconn3ct/bastion-otp:v0.$BUILD_NUMBER ;
+      fi
 
 # From examples
 integrations:
