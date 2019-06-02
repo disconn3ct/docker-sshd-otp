@@ -1,3 +1,6 @@
+# We're Docker (not C) but it takes forever to install ruby stuff otherwise
+language: c
+
 build:
   ci:
     - docker build -t disconn3ct/otp-ssh:v2.$BUILD_NUMBER .
